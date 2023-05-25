@@ -24,7 +24,7 @@ app.get('/users', (req, res) => {
 });
 
 app.get('/messages', (req, res) => {
-    let queryText = 'SELECT * FROM messages;';
+    let queryText = 'SELECT * FROM messages ORDER BY "timestamp";';
     pool.query(queryText)
         .then((result) => {
             res.status(200).send(result.rows);

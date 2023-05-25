@@ -8,6 +8,16 @@
 </head>
 <body>
     <h1>Steve and Daniel's First App</h1>
+    <form id="newMessage" onsubmit="sendMessage(event)">
+    <input id="title" placeholder="Title"/>
+    <input id="text" placeholder="Enter message here"/>
+    <input id="time_sent" placeholder="Time sent"/>
+    <button type='submit' id="sender">Send</button>
+    </form>
+
+    <div id="display">
+
+    </div>
     <script src="./scripts/client.js"></script>
 </body>
 </html>
