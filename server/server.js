@@ -40,7 +40,7 @@ app.post('/messages', (req, res) => {
         INSERT INTO messages (title, text, timestamp)
         VALUES ($1, $2, $3);
     `;
-    pool.query(queryText, [messages.title, messages.text, messages.timestamp])
+    pool.query(queryText, [newMessage.title, newMessage.text, newMessage.timestamp])
         .then((result) => {
             res.sendStatus(201);
         }).catch((error) => {
